@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>스크립트 전</p>
+
+    <!-- <script> 태그엔 자바스크립트 코드가 들어갑니다.-->
+    <script>
+      alert("Hello, world!");
+    </script>
+
+    <!-- script 태그에는 몇가지 속성이 있다. type="text/javascript" html4에서는 필수 였지만 요즘은 쓰지않는다.-->
+
+    <!-- 외부스크립트 사용방법 1 (파일 경로) -->
+    <script src="/path/to/script.js"></script>
+
+    <!-- 외부스크립트 사용방법 2 (url)) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+
+    <!-- HTML 안에 직접 스크립트를 작성하는 방식은 대개 스크립트가 아주 간단할 때만 사용합니다. 스크립트가 길어지면 별개의 분리된 파일로 만들어 저장하는 것이 좋습니다.
+스크립트를 별도의 파일에 작성하면 브라우저가 스크립트를 다운받아 캐시(cache)에 저장하기 때문에, 성능상의 이점이 있습니다.
+여러 페이지에서 동일한 스크립트를 사용하는 경우, 브라우저는 페이지가 바뀔 때마다 스크립트를 새로 다운받지 않고 캐시로부터 스크립트를 가져와 사용합니다. 스크립트 파일을 한 번만 다운받으면 되죠.
+이를 통해 트래픽이 절약되고 웹 페이지의 실제 속도가 빨라집니다. -->
+
+    <p>스크립트 후</p>
+  </body>
+</html>
