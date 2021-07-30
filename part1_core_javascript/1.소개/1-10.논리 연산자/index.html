@@ -9,23 +9,32 @@
   <body>
     <script>
       `논리 연산자``1. OR’ 연산자는 두 개의 수직선 기호로 만들 수 있습니다.`;
-    //   alert(true || true); // true
-    //   alert(false || true); // true
-    //   alert(true || false); // true
-    //   alert(false || false); // false
-      `피연산자가 모두 false인 경우를 제외하고 연산 결과는 항상 true입니다.`
-    //   result = value1 || value2 || value3;
-      `이때, OR ||연산자는 다음 순서에 따라 연산을 수행합니다.`
-      `아무리 여러개의 인자가 있다고 하더라도 true가 한개라도 있으면 or에서는 true로 반환된다.`
-     
-
-
+      //   alert(true || true); // true
+      //   alert(false || true); // true
+      //   alert(true || false); // true
+      //   alert(false || false); // false
+      `피연산자가 모두 false인 경우를 제외하고 연산 결과는 항상 true입니다.` //   result = value1 || value2 || value3;
+      `이때, OR ||연산자는 다음 순서에 따라 연산을 수행합니다.``아무리 여러개의 인자가 있다고 하더라도 true가 한개라도 있으면 or에서는 true로 반환된다.`;
     </script>
+    <script nomodule>
+      alert(firstName || "익명" || nickName); // 익명
+    </script>
+    // `or 연산자는 마지막 결과값에서 첫번쨰 측 왼쪽 결과값을 도출하게 된다.` //
+    true || alert("not printed"); // `그래서 이와 같은 경우는 alert 함수가
+    실행되지 않는다.`
+
     <script>
-       let none; // false
-       let firstName = ""; // false
-       let nickName = "바이올렛"; //true
-       alert( firstName ||"익명" || nickName); // 바이올렛
+      // `&& and 논리 연산자`// alert(false && true); // false // alert(true && true); // true
+      // // alert(true && false); // false
+      // // alert(false && false); // false
+
+      // `&&의 우선순위가 ||보다 높습니다.``AND 연산자 &&의 우선순위는 OR 연산자 ||보다 높습니다.`;
+      // if ((a && b) || (c && d)) {
+      // }
+      // if ((a && b) || (c && d)) {
+      // }
+      // `위 두개는 같은 뜻이다`;
+     
     </script>
   </body>
 </html>
