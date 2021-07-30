@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    조건에 따라 다른 행동을 취해야 할 때가 있습니다. 이럴 땐, if문과 ‘물음표’
+    연산자라고도 불리는 조건부 연산자 ?를 사용하면 됩니다.
+    <script>
+            let year = prompt("ECMAScript-2015 명세는 몇 년도에 출판되었을까요?", "");
+            if (year == 2015) {
+              alert("정답입니다!");
+            }
+            if (1) {
+              // 1은 실행함
+            }
+            if (0) {
+              //0은 실행안함
+            }
+            let year = prompt("ECMAScript-2015 명세는 몇 년도에 출판되었을까요?", "");
+            if (year < 2015) {
+              alert("숫자를 좀 더 올려보세요.");
+            } else if (year > 2015) {
+              alert("숫자를 좀 더 내려보세요.");
+            } else {
+              alert("정답입니다!");
+            }
+            let result = condition ? value1 : value2;
+      `평가 대상인 condition이 truthy라면 value1이, 그렇지 않으면 value2가 반환됩니다.`
+    </script>
+  </body>
+</html>

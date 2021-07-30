@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 형 변환
+    함수와 연산자에 전달되는 값은 대부분 적절한 자료형으로 자동 변환됩니다. 이런 과정을 "형 변환(type conversion)"이라고 합니다.
+    -->
+    <script>
+      `1. 문자형으로 변환`;
+      let value = true;
+      alert(typeof value); // boolean
+      value = String(value);
+      alert(typeof value); // string
+      `2. 숫자형으로 변환`;
+      let str = "123";
+      alert(typeof str); // string
+      let num = Number(str); // 문자열 "123"이 숫자 123으로 변환됩니다.
+      alert(typeof num); // number
+      let abc = "123";
+      abc = Number(abc);
+      console.log(abc); // 123
+
+      let a = "1";
+      let b = 1;
+
+      console.log(a + b); // 11
+      console.log(a - b); // 0
+      console.log(a * b); // 1
+      console.log(a / b); // 1
+      alert(Boolean(1)); // 문자열(true)
+      console.log(Boolean(1)); // 숫자 1(true)
+      console.log(Boolean(0)); // 숫자 0(false)
+      console.log(Boolean("hello")); // 문자열(true)
+      console.log(Boolean(1)); //정수(true)
+      console.log(Boolean("")); // 빈 문자열(false)
+    </script>
+  </body>
+</html>

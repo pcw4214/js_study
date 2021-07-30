@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    자료형 자바스크립트에서 값은 항상 문자열이나 숫자형 같은 특정한 자료형에
+    속합니다. 자바스크립트에는 여덟 가지 기본 자료형이 있습니다.
+    <script>
+      ```1. 숫자형```;
+      let n = 123;
+      n = 12.345;
+
+      ```2. 문자형```;
+      let str = "Hello";
+      let str2 = "Single quotes are ok too";
+      let phrase = `can embed another ${str}`;
+      //  큰따옴표: "Hello"
+      // 작은따옴표: 'Hello'
+      // 역 따옴표(백틱, backtick): `Hello`
+      let name = "John";
+      // 변수를 문자열 중간에 삽입
+      alert(`Hello, ${name}!`); // Hello, John!
+      // 표현식을 문자열 중간에 삽입
+      alert(`the result is ${1 + 2}`); // the result is 3
+
+      ```3. null 값```;
+      // 자바스크립트에선 null을 ‘존재하지 않는(nothing)’ 값, ‘비어 있는(empty)’ 값, ‘알 수 없는(unknown)’ 값을 나타내는 데 사용합니다.
+      let age = null;
+
+      ```4. undefined 값```;
+      //   undefined는 '값이 할당되지 않은 상태’를 나타낼 때 사용합니다.
+      let age;
+      alert(age); // 'undefined'가 출력됩니다.
+
+      let age = 100;
+      // 값을 undefined로 바꿉니다.
+      age = undefined;
+      alert(age); // "undefined"
+      //하지만 이렇게 undefined를 직접 할당하는 걸 권장하진 않습니다. 변수가 ‘비어있거나’ ‘알 수 없는’ 상태라는 걸 나타내려면 null을 사용하세요.
+
+      ```5. 객체와 심볼```// 객체(object)형은 특수한 자료형입니다.
+      // 객체형을 제외한 다른 자료형은 문자열이든 숫자든 한 가지만 표현할 수 있기 때문에 원시(primitive) 자료형이라 부릅니다.
+      // 반면 객체는 데이터 컬렉션이나 복잡한 개체(entity)를 표현할 수 있습니다.
+      // 이런 특징 때문에 자바스크립트에서 객체는 좀 더 특별한 취급을 받습니다. 자세한 내용은 원시형을 배우고 난 후 객체에서 다루도록 하겠습니다.
+      // 심볼(symbol)형은 객체의 고유한 식별자(unique identifier)를 만들 때 사용됩니다. 심볼형에 대해선 객체를 학습하고 난 이후에 자세히 알아보겠습니다.
+
+      ```6. typeof 연산자```;
+      // typeof 연산자는 인수의 자료형을 반환합니다
+      // typeof 연산자는 두 가지 형태의 문법을 지원합니다.
+      // 연산자: typeof x
+      // 함수: typeof(x)
+      typeof undefined; // "undefined"
+      typeof 0; // "number"
+      typeof 10n; // "bigint"
+      typeof true; // "boolean"
+      typeof "foo"; // "string"
+
+      
+    </script>
+  </body>
+</html>
