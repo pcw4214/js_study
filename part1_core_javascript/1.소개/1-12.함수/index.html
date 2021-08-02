@@ -23,5 +23,28 @@
       showMessage();
       showMessage();
     </script>
+    <script>
+      `지역 변수 함수 내에서 선언한 변수인 지역 변수(local variable)는 함수 안에서만 접근할 수 있습니다.`;
+
+      function showMessage() {
+        let message = "안녕하세요!"; // 지역 변수
+
+        alert(message);
+      }
+
+      showMessage(); // 안녕하세요!
+
+      alert(message); // ReferenceError: message is not defined (message는 함수 내 지역 변수이기 때문에 에러가 발생합니다.)
+    </script>
+    <script>
+      `외부 변수 함수 내부에서 함수 외부의 변수인 외부 변수(outer variable)에 접근할 수 있습니다.`;
+      let userName = "John";
+      function showMessage() {
+        let message = "Hello, " + userName;
+        alert(message);
+      }
+      showMessage(); // Hello, John
+    </script>
+    
   </body>
 </html>
