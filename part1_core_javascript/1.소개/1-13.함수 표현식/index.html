@@ -7,16 +7,36 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
-    //   function sayHi() {
-    //     alert("Hello");
-    //   }
-    //   sayHi();
-    // alert(sayHi);
+    <script nomodule="">
+      //   function sayHi() {
+      //     alert("Hello");
+      //   }
+      //   sayHi();
+      // alert(sayHi); //실행되지 않음 ? 함수()로 표현되지 않았기 때문
+      //자바스크립트에서는 ()가 있어야만 함수가 호출된다.
       let sayHi = function () {
         alert("Hello");
       };
-     alert(sayHi);
+      alert(sayHi);
+      // 함수는 값이기 때문에 생성직후 바로 변수에 대입이 가능하고
+      // alert 함수에 함수를 넣어서 사용이 가능하다.
+      // 함수는 동작을 나타내는 값이다. 다른 언어와 달리 동작을 나타내는것이 아니다.
+    </script>
+    <script nomodule="">
+      // `콜백함수``함수를 함수의 인수로 전달하고,
+      // 필요하다면 인수로 전달한 그 함수를 "나중에 호출(called back)"하는 것이
+      // 콜백 함수의 개념입니다.`;
+      function ask(question, yes, no) {
+        if (confirm(question)) yes();
+        else no();
+      }
+      function showOk() {
+        alert("동의하셨습니다.");
+      }
+      function showCancel() {
+        alert("취소 버튼을 누르셨습니다.");
+      }
+      ask("동의하십니까?", showOk, showCancel);
     </script>
   </body>
 </html>
