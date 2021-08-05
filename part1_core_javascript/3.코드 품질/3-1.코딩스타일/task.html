@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      `좋지 않은 코드 스타일
+      중요도: 4
+      아래 코드가 어떤 점에서 좋지 않은지 생각해보세요.`;
+     
+      let x = prompt("x?", "");
+      let n = prompt("n?", "");
+
+      if (n <= 0) {
+        alert(
+          `Power ${n} is not supported, please enter an integer number greater than zero`
+        );
+      } else {
+        alert(pow(x, n));
+      }
+      function pow(x, n) {
+        let result = 1;
+
+        for (let i = 0; i < n; i++) {
+          result *= x;
+        }
+        
+        return result;
+      }
+    </script>
+  </body>
+</html>
