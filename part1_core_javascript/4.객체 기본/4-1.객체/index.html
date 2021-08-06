@@ -129,6 +129,45 @@
       console.log(user);
       // Object { name: "John", age: 30, "남": "남" }
     </script>
-    <script></script>
+    <script>
+      let user = { name: "John", age: 30 };
+
+      console.log("age" in user);
+      // user.age가 존재하므로 true가 출력됩니다.
+
+      console.log("blabla" in user);
+      // user.blabla는 존재하지 않기 때문에 false가 출력됩니다.
+    </script>
+    <script>
+      let user = {
+        name: "John",
+        age: 30,
+        isAdmin: true,
+      };
+
+      for (let key in user) {
+        // 키
+        console.log(key); // name, age, isAdmin
+
+        // 키에 해당하는 값
+        console.log(user[key]); // John, 30, true
+      }
+
+      //다소 번외 ;;
+      //key대신 아무거나 변수명을 사용해도 된다.
+      // 받는 변수명과 같기만하면 문제되지 않는다.
+    </script>
+    <script>
+      let user = {
+        name: "John",
+        surname: "Smith",
+      };
+      user.age = 25; // 프로퍼티를 하나 추가합니다.
+
+      // 정수 프로퍼티가 아닌 프로퍼티는 추가된 순서대로 나열됩니다.
+      for (let prop in user) {
+        console.log(prop); // name, surname, age
+      }
+    </script>
   </body>
 </html>

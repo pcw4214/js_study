@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    객체야 안녕? 중요도: 5 다음 각 동작을 한 줄씩, 코드로 작성해보세요. 빈 객체
+    user를 만듭니다. user에 키가 name, 값이 John인 프로퍼티를 추가하세요. user에
+    키가 surname, 값이 Smith인 프로퍼티를 추가하세요. name의 값을 Pete로
+    수정해보세요. user에서 프로퍼티 name을 삭제하세요.
+    <script nomodule="">
+      `프로퍼티 수정 문제인듯하다`;
+      let user = {};
+
+      user.name = "John";
+      user.surname = "Smith";
+      console.log(user); // {name: "John", surname: "Smith"}
+
+      user.name = "Pete";
+      console.log(user); // {name: "Pete", surname: "Smith"}
+
+      delete user.name;
+      console.log(user); // {surname: "Smith"}
+    </script>
+    <script nomodule="">
+      let schedule = {};
+      schedule["8:30"] = "get up";
+      console.log(schedule);
+      console.log("8:30" in schedule);
+    </script>
+    <script nomodule="">
+      const user = {
+        name: "John",
+      };
+
+      user.name = "Pete";
+      console.log(user);
+      //true;
+
+      user = 123;
+      // false
+    </script>
+    프로퍼티 합계 구하기 중요도: 5 모든 팀원의 월급에 대한 정보를 담고 있는
+    객체가 있다고 해봅시다. 모든 팀원의 월급을 합한 값을 구하고, 그 값을 변수
+    sum에 저장해주는 코드를 작성해보세요. sum엔 390이 저장되어야겠죠? 주의:
+    salaries가 비어있다면 sum에 0이 저장되어야 합니다.
+    <script nomodule="">
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130,
+      };
+      let sum = 0;
+      for (let params in salaries) {
+        console.log(salaries[params]); // object name 에 해당하는 값을 모두 출력
+        sum += salaries[params];
+      }
+      console.log(sum);
+    </script>
+    프로퍼티 값 두 배로 부풀리기 중요도: 3 객체 obj의 프로퍼티 값이 숫자인 경우
+    그 값을 두 배 해주는 함수 multiplyNumeric(obj)을 만들어보세요.
+    <script>
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu",
+      };
+      function multiplyNumeric(object) {
+        for (let params in object) {
+          console.log(object[params]);
+          if (typeof object[params] == "number") {
+            object[params] *= 2; // 원래 값에 2를 곱하라
+            console.log(object);
+            // {width: 400, height: 600, title: "My menu"}
+          }
+        }
+      }
+      multiplyNumeric(menu);
+    </script>
+  </body>
+</html>
