@@ -19,3 +19,42 @@ console.log(user.name);
 user.name = "aa";
 console.log(admin.name); // 바뀐다.
 
+// 참조에 의한 비교
+//객체 비교 시 동등 연산자 ==와 일치 연산자 ===는 동일하게 동작합니다.
+
+let a = {};
+let b = a; // 참조에 의한 복사
+
+alert( a == b ); // true, 두 변수는 같은 객체를 참조합니다.
+alert( a === b ); // true
+
+let a = {};
+let b = {}; // 독립된 두 객체
+
+alert( a == b ); // false
+
+// 여러 객체를 assign 메서드를 사용하여 하나로 병합시키는 방법.
+let user = { name: "John" };
+let permissions1 = { canView: true };
+let permissions2 = { canEdit: true };
+
+// permissions1과 permissions2의 프로퍼티를 user로 복사합니다.
+Object.assign(user, permissions1, permissions2);
+
+// user = { name: "John", canView: true, canEdit: true }
+
+let user = { name: "John" };
+
+let permissions1 = { canView: true };
+let permissions2 = { canEdit: true };;
+
+let newUser = {}
+
+Object.assign(user, permissions1, permissions2);
+console.log(user);
+console.log(permissions1);
+console.log(permissions2);
+Object.assign(newUser, user);
+console.log(newUser);
+
+newUser.name = "park";
