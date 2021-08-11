@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 숫자형 -->
+    숫자를 입력하는 다양한 방법 10억을 입력해야 한다고 상상해 봅니다. 가장
+    분명한 방법은 아래와 같이 직접 10억(one billion)을 써주는 것입니다. let
+    billion = 1000000000; 그런데 이렇게 0을 많이 사용해 숫자를 표현하다 보면
+    잘못 입력하기 쉽기 때문에, 실제로는 이런 방법을 잘 사용하지 않습니다.
+    자바스크립트에서도 숫자 옆에 'e'를 붙이고 0의 개수를 그 옆에 붙여주면 숫자를
+    줄일 수 있습니다.
+    <script>
+      let billion = 1e9; // 10억, 1과 9개의 0
+
+      alert(7.3e9); // 73억 (7,300,000,000)
+      // 1e3 = 1 * 1000 , 1.23e6 = 1.23 * 1000000
+
+      // 이제 아주 작은 숫자인 1마이크로초(백만 분의 1초)를 표현해보겠습니다.
+
+      let ms = 0.000001;
+      let ms = 1e-6; // 1에서 왼쪽으로 6번 소수점 이동
+    </script>
+    <script>
+      //toString(base)
+      //num.toString(base) 메서드는 base진법으로 num을 표현한 후, 이를 문자형으로 변환해 반환합니다.
+      // base는 2에서 36까지 쓸 수 있는데, 기본값은 10입니다.
+      let num = 255;
+
+      alert(num.toString(16)); // ff
+      alert(num.toString(2)); // 11111111
+    </script>
+    <script>
+      // 어림수 구하기
+      //어림수를 구하는 것(rounding)은 숫자를 다룰 때 가장 많이 사용되는 연산 중 하나입니다.
+      //어림수 관련 내장 함수 몇 가지를 살펴봅시다.
+      Math.floor;
+      //소수점 첫째 자리에서 내림(버림). 3.1은 3, -1.1은 -2가 됩니다.
+      Math.ceil;
+      //소수점 첫째 자리에서 올림. 3.1은 4, -1.1은 -1이 됩니다.
+      Math.round;
+      //소수점 첫째 자리에서 반올림. 3.1은 3, 3.6은 4, -1.1은 -1이 됩니다.
+      Math.trunc;
+      //소수부를 무시. 3.1은 3이 되고 -1.1은 -1이 됩니다.
+
+      //소수점 n-th번째 수를 기준으로 어림수를 구해야 하는 상황
+      // 1. 곱하기와 나누기 (소수점 두 번째 자리 숫자까지만 남기고 싶은 경우 )
+      let num = 1.23456;
+      alert(Math.floor(num * 100) / 100);
+      // 2. 소수점 n번째 수까지의 어림수를 구한 후 이를 문자형으로 반환해 주는 메서드인 toFixed(n)을 사용합니다.
+      let num = 12.34;
+      alert(num.toFixed(1));
+      // toFixed 는 반환값이 문자열이라서 주의해야한다. 그래서 앞에 +연산자나 Number()을 호출하면 문자형에서 숫자형으로 변환 할 수 있습니다.
+
+      // parseInt와 parseFloat
+      alert(parseInt("100px")); // 100
+      alert(parseFloat("12.5em")); // 12.5
+
+      alert(parseInt("12.3")); // 12, 정수 부분만 반환됩니다.
+      alert(parseFloat("12.3.4")); // 12.3, 두 번째 점에서 숫자 읽기를 멈춥니다.
+
+      alert( parseInt('a123') ); // NaN, a는 숫자가 아니므로 숫자를 읽는 게 중지됩니다
+
+      
+    </script>
+  </body>
+</html>

@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script nomodule="">
+      `원시값:
+            원시형 값입니다.
+            원시형의 종류는 문자(string), 숫자(number), bigint, 불린(boolean), 심볼(symbol), null, undefined형으로
+            총 일곱 가지 입니다.`;
+      let str = "Hello";
+
+      alert(str.toUpperCase()); // HELLO
+      //문자열 str은 원시값이므로 원시값의 프로퍼티(toUpperCase)에 접근하는 순간 특별한 객체가 만들어집니다. 이 객체는 문자열의 값을 알고 있고, toUpperCase()와 같은 유용한 메서드를 가지고 있습니다.
+      //메서드가 실행되고, 새로운 문자열이 반환됩니다(alert 창에 이 문자열이 출력됩니다).
+      //특별한 객체는 파괴되고, 원시값 str만 남습니다.
+
+      let n = 1.23456;
+
+      alert(n.toFixed(2)); // 1.23
+      //숫자형도 고유한 메서드를 지원합니다. 메서드 toFixed(n)를 이용하면 원하는 자리에서 소수점 아래 숫자를 반올림할 수 있습니다.
+    </script>
+    <script>
+      if ($(window).width() > 1400) {
+        alert(11);
+        console.log( $(window).width())
+      } else if (1400 < $(window).width() >= 1200) {
+        alert(22);
+        console.log( $(window).width())
+      } else {
+        alert(33);
+        console.log( $(window).width())
+      }
+    </script>
+  </body>
 </html>
