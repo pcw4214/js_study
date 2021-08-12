@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    따옴표 따옴표의 종류가 무엇이 있었는지 상기해봅시다. 문자열은 작은따옴표나
+    큰따옴표, 백틱으로 감쌀 수 있습니다. let single = '작은따옴표'; let double =
+    "큰따옴표"; let backticks = `백틱`; 작은따옴표와 큰따옴표는 기능상 차이가
+    없습니다. 그런데 백틱엔 특별한 기능이 있습니다. 표현식을 ${…}로 감싸고 이를
+    백틱으로 감싼 문자열 중간에 넣어주면 해당 표현식을 문자열 중간에 쉽게 삽입할
+    수 있죠. 이런 방식을 템플릿 리터럴(template literal)이라고 부릅니다.
+
+    <script>
+      function sum(a, b) {
+        return a + b;
+      }
+      alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3.
+    </script>
+    문자열의 길이 length 프로퍼티엔 문자열의 길이가 저장됩니다.
+    <script>
+      alert(`My\n`.length); // 3
+    </script>
+    <script>
+      let str = `Hello`;
+
+      `마지막 글자`;
+      console.log(str[str.length - 1]); // o
+
+      `첫 번째 글자`;
+      console.log(str[0]); // H
+      console.log(str.charAt(0)); // H
+
+      `없는 곳`;
+      console.log(str[1000]); // undefined
+      console.log(str.charAt(1000)); // '' (빈 문자열)
+    </script>
+    <script>
+      for (let i of "Hello") {
+        console.log(i);
+        // H,e,l,l,o (i는 순차적으로 H, e, l, l, o가 됩니다.)
+      }
+    </script>
+    <script>
+      let str = "hello";
+
+      console.log(str.toUpperCase());
+      // "HELLO";
+
+      `중간에 일부만 바꾸기`;
+
+      let str = "hello";
+      str = str[2].toUpperCase();
+      console.log(str);
+      // L *문자의 불변성 원칙으로 전체값중에 일부만 바꾼다고 다 바뀌진 않는다.
+
+      let str = "hello";
+      let new_str = "";
+
+      for (let i of str) {
+        if (i == "e") {
+          new_str += str[1].toUpperCase();
+        }
+        new_str += i;
+      }
+      console.log(new_str);
+
+      // "hEllo"
+    </script>
+    <script>
+      let str = "HELLO";
+
+      console.log(str.toLowerCase());
+      // hello;
+    </script>
+    <script>
+      `찾는 단어 중 처음 만나는 글자를 기준으로 함`;
+
+      let str = "Widget with id";
+
+      console.log(str.indexOf("Widget"));
+      // 0, str은 'Widget'으로 시작함
+
+      console.log(str.indexOf("widget"));
+      // -1, indexOf는 대·소문자를 따지므로 원하는 문자열을 찾지 못함
+
+      console.log(str.indexOf("id"));
+      // 1, "id"는 첫 번째 위치에서 발견됨 (Widget에서 id)
+
+      `두번째 인수를 넣어주면 해당 위치 이후부터 찾는다`;
+
+      let str = "Widget with id";
+
+      alert(str.indexOf("id", 2)); // 12
+    </script>
+  </body>
+</html>
