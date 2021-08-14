@@ -147,12 +147,15 @@
       alert(str.substr(-4, 2)); // gi, 끝에서 네 번째 위치부터 글자 두 개
     </script>
     <script>
-      alert( 'a' > 'Z' ); // true
+      alert("a" > "Z"); // true
     </script>
     <script>
       // 글자는 같지만 케이스는 다르므로 반환되는 코드가 다릅니다.
-alert( "z".codePointAt(0) ); // 122
-alert( "Z".codePointAt(0) ); // 90
+      //pos에 위치한 글자의 코드를 반환합니다.
+      alert("z".codePointAt(0)); // 122
+      alert("Z".codePointAt(0)); // 90
+      //숫자 형식의 code에 대응하는 글자를 만들어줍니다.
+      alert( String.fromCodePoint(90) ); // Z
     </script>
   </body>
 </html>
